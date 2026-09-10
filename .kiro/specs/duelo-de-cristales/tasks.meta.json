@@ -1,0 +1,108 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Crear repositorio GitHub con README.md inicial": [
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789059666397
+      },
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789060035075
+      }
+    ],
+    "1.2 Crear `client/` con Vite React+TypeScript": [
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789059666852
+      },
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789060036105
+      }
+    ],
+    "1.3 Crear `server/` con dependencias Express + TypeScript": [
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789059667558
+      },
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789060036860
+      }
+    ],
+    "1.4 Configurar `tsconfig.json` en `client/` y `server/`": [
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789060040099
+      },
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789060046430
+      }
+    ],
+    "1.5 Configurar ESLint en `client/` y `server/`": [
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789060040705
+      },
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789060047058
+      }
+    ],
+    "1.6 Configurar `package.json` raíz con scripts de workspace": [
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789060041348
+      },
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789060047746
+      }
+    ],
+    "1.7 Configurar proxy en `vite.config.ts`": [
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789060042712
+      },
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789060048394
+      }
+    ],
+    "1.8 Crear carpeta `docs/` con archivos Markdown iniciales": [
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789060043094
+      },
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789060049108
+      }
+    ],
+    "1. Setup del repositorio y configuración base": [
+      {
+        "executionId": "044a9a3f-1410-41b9-a803-bb0730c73e95",
+        "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
+        "timestamp": 1789060049147
+      }
+    ]
+  }
+}
