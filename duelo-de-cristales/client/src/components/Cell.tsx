@@ -5,8 +5,8 @@ import type {
   Projectile,
   SpellEffect,
 } from "../types/game";
-import mageDown from "../assets/image_7290316.png";
-import mageUp from "../assets/Text to Image-1789058205000.png";
+import mageBlue from "../assets/Text to Image-1789058205000.png";
+import mageRed from "../assets/image_7290316.png";
 import obstacle from "../assets/image_7290514.png";
 import spellFx from "../assets/image_7290478.png";
 import coreP1 from "../assets/image_7290380.png";
@@ -51,7 +51,7 @@ export function Cell({ cell, units, projectiles, x, y, effect }: CellProps) {
         testId = "cell-mage-p1";
         content = (
           <>
-            <img className="mage-sprite" src={mageDown} alt="Mago P1" />
+            <img className="mage-sprite" src={mageBlue} alt="Mago P1" />
             <span className="unit-hp">{unit.hp}</span>
           </>
         );
@@ -60,7 +60,7 @@ export function Cell({ cell, units, projectiles, x, y, effect }: CellProps) {
         testId = "cell-mage-p2";
         content = (
           <>
-            <img className="mage-sprite" src={mageUp} alt="Mago P2" />
+            <img className="mage-sprite" src={mageRed} alt="Mago P2" />
             <span className="unit-hp">{unit.hp}</span>
           </>
         );

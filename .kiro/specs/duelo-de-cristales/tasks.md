@@ -501,31 +501,31 @@ Plan de implementación para un juego web por turnos de 2 jugadores construido c
   - Completar todos los archivos Markdown en `docs/` y el `README.md` raíz.
   - _Requisitos: 21.1, 21.2_
 
-  - [~] 17.1 Completar `docs/introduction.md`
+  - [x] 17.1 Completar `docs/introduction.md`
     - Nombre del proyecto, propósito, descripción de la experiencia de juego, tipo de jugadores objetivo y tecnologías usadas.
     - _Requisitos: 21.1_
 
-  - [~] 17.2 Completar `docs/reglas.md`
+  - [x] 17.2 Completar `docs/reglas.md`
     - Todas las reglas del juego: acciones válidas e inválidas con sus costes de maná, movimiento de Minions, proyectiles, eventos aleatorios, condiciones de victoria y empate, límite de 30 turnos.
     - _Requisitos: 21.1_
 
-  - [~] 17.3 Completar `docs/api.md`
+  - [x] 17.3 Completar `docs/api.md`
     - Documentar los 4 endpoints REST: método, URL, cuerpo de solicitud, cuerpo de respuesta exitosa, cuerpos de error, códigos HTTP. Incluir ejemplos JSON completos para cada caso.
     - _Requisitos: 21.1_
 
-  - [~] 17.4 Completar `docs/decisiones.md`
+  - [x] 17.4 Completar `docs/decisiones.md`
     - Decisiones técnicas tomadas (Map en memoria vs DB, Vite proxy vs CORS, fast-check para PBT, Render single-service), justificación, riesgos identificados y cómo se mitigan.
     - _Requisitos: 21.1_
 
-  - [~] 17.5 Completar `docs/investigacion.md`
+  - [x] 17.5 Completar `docs/investigacion.md`
     - Investigación sobre Playwright (configuración headless/visual, modos de reporte), Render (variables de entorno, puertos, webhooks), Docker (por qué se descartó o adoptó), puertos y variables de entorno del proyecto.
     - _Requisitos: 21.1_
 
-  - [~] 17.6 Completar `docs/ia.md`
+  - [x] 17.6 Completar `docs/ia.md`  (omitido: el docente confirmó que no es necesario)
     - Registro cronológico del uso de IA en el proyecto: solicitudes hechas, respuestas incorporadas, verificación manual realizada, partes generadas automáticamente vs escritas a mano.
     - _Requisitos: 21.1_
 
-  - [~] 17.7 Completar `README.md` raíz
+  - [x] 17.7 Completar `README.md` raíz
     - Secciones: descripción breve, requisitos previos (Node.js, npm), comandos de instalación y ejecución local, arquitectura (diagrama Mermaid), referencia de endpoints JSON, variables de entorno, enlace al deploy en Render, enlace al video de demostración.
     - _Requisitos: 21.1, 21.2_
 
