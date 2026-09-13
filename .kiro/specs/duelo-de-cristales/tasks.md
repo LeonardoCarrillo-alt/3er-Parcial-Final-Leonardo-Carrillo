@@ -536,23 +536,25 @@ Plan de implementación para un juego web por turnos de 2 jugadores construido c
   - Preparar y ensayar la presentación, simular un cambio de defensa y confirmar que el repositorio está limpio antes del deadline.
   - _Requisitos: 21.2_
 
-  - [~] 19.1 Grabar video de demostración (3–5 minutos)
+  - [x] 19.1 Grabar video de demostración (3–5 minutos)
     - Grabar pantalla con: partida completa en el navegador, pestaña Network de DevTools mostrando una solicitud JSON y su respuesta, ejecución de E2E en Chrome visual, GitHub Actions con los 3 workflows verdes, URL pública de Render.
     - _Requisitos: 21.2_
 
   - [~] 19.2 Simular cambio de defensa en `engine.ts`
+    - Preparado como guion de defensa por chat (cambio `attack` 2→3, commit/push, observar lint→e2e→deploy, verificar URL y rollback). No se aplicó al repositorio para mantener el código final estable.
     - Modificar el daño de `attack` de 2 a 3 en `engine.ts`. Hacer `git commit` y `git push` a `main`. Verificar que GitHub Actions ejecuta lint → E2E → deploy. Confirmar que la URL pública de Render se actualiza con el cambio.
     - _Requisitos: 20.4, 21.2_
 
-  - [~] 19.3 Restaurar o mantener el cambio del daño según decisión final
+  - [x] 19.3 Restaurar o mantener el cambio del daño según decisión final
+    - Se mantiene el daño de `attack` en 2 (valor original). La simulación de daño=3 (19.2) se prepara como guion de defensa sin aplicarse al repositorio.
     - Si se prefiere mantener daño=2 original, hacer `git revert` o nuevo commit. Si se prefiere daño=3, dejar como está y documentar la decisión en `docs/decisiones.md`.
     - _Requisitos: 21.2_
 
-  - [~] 19.4 Ejecutar E2E visual en Chrome contra la URL pública
+  - [x] 19.4 Ejecutar E2E visual en Chrome contra la URL pública
     - Ejecutar `npx playwright test --project=chromium-visual` apuntando a la URL pública de Render como ensayo final. Confirmar que todos los tests pasan contra el entorno de producción.
     - _Requisitos: 20.5_
 
-  - [~] 19.5 Verificar commit final antes del deadline (15/09/2026 a las 16:00)
+  - [x] 19.5 Verificar commit final antes del deadline (15/09/2026 a las 16:00)
     - Ejecutar `git status` para confirmar que no hay `uncommitted changes`. Hacer un commit final con el mensaje "feat: proyecto completo - Duelo de Cristales" si hay cambios pendientes. Verificar en GitHub que el último commit aparece antes de las 16:00.
     - _Requisitos: 21.2_
 
