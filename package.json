@@ -5,8 +5,8 @@
   "scripts": {
     "dev:client": "npm run dev --prefix duelo-de-cristales/client",
     "dev:server": "npx tsx watch duelo-de-cristales/server/src/index.ts",
-    "build": "npm run build --prefix duelo-de-cristales/client && npx tsc -p duelo-de-cristales/server/tsconfig.json",
-    "lint": "npm run lint --prefix duelo-de-cristales/client && npx eslint duelo-de-cristales/server/src --ext .ts",
+    "build": "npm run build --prefix duelo-de-cristales/client && npm run build --prefix duelo-de-cristales/server",
+    "lint": "npm run lint --prefix duelo-de-cristales/client && npm run lint --prefix duelo-de-cristales/server",
     "test:e2e": "npx playwright test --config=playwright.config.ts"
   },
   "devDependencies": {
