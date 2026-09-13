@@ -95,7 +95,7 @@
 
 #### Acceptance Criteria
 
-1. WHEN el jugador activo envía la acción `collect` y el Mago está en una casilla con un Cristal, THE Backend SHALL eliminar el Cristal de esa casilla del Tablero, incrementar en 1 el contador de cristales del jugador activo y mantener el maná del jugador activo en el mismo valor que tenía antes de la acción.
+1. WHEN el jugador activo envía la acción `collect` y el Mago está en una casilla con un Cristal, THE Backend SHALL eliminar el Cristal de esa casilla del Tablero, incrementar en 1 el contador de cristales del jugador activo e incrementar en 2 el maná del jugador activo.
 2. WHEN el jugador activo envía la acción `collect` y el Mago está en una casilla con un Cristal, THE Backend SHALL responder con `ok: true` e incluir el Estado actualizado del Tablero y del jugador activo.
 3. IF la casilla del Mago no contiene un Cristal, THEN THE Backend SHALL responder con un error indicando que no hay cristal en la casilla sin modificar el Estado del juego.
 4. IF el jugador que envía la acción `collect` no es el jugador activo del turno en curso, THEN THE Backend SHALL responder con un error indicando que no es su turno sin modificar el Estado del juego.
@@ -140,7 +140,7 @@
 #### Acceptance Criteria
 
 1. WHEN el jugador activo envía la acción `attack` con un objetivo adyacente al Mago y dispone de al menos 1 punto de maná, THE Backend SHALL infligir `max(2 - armadura_objetivo, 1)` puntos de daño a la unidad objetivo y restar 1 punto de maná al jugador activo.
-2. WHEN el daño reduce los HP de una unidad a 0 o menos, THE Backend SHALL eliminar la unidad del Tablero y, si la unidad eliminada es un Núcleo, activar inmediatamente la condición de victoria del jugador atacante.
+2. WHEN el daño reduce los HP de una unidad a 0 o menos, THE Backend SHALL eliminar la unidad del Tablero y, si la unidad eliminada es un Núcleo o un Mago, activar inmediatamente la condición de victoria del jugador atacante.
 3. THE Backend SHALL permitir como máximo una acción `attack` por turno por jugador; si el jugador activo intenta un segundo ataque en el mismo turno, THE Backend SHALL rechazarlo con un error descriptivo.
 4. IF el jugador activo no dispone de al menos 1 punto de maná, THEN THE Backend SHALL responder con un error de maná insuficiente sin aplicar daño.
 5. IF no existe ninguna unidad enemiga adyacente al Mago, THEN THE Backend SHALL responder con un error indicando que no hay objetivo adyacente sin aplicar daño ni consumir maná.
@@ -202,7 +202,7 @@
 
 #### Acceptance Criteria
 
-1. WHEN los HP del Núcleo de un jugador llegan a 0 o menos, THE Backend SHALL establecer `status: "finished"`, asignar `winner` al jugador contrario y dejar de aceptar acciones para esa Partida.
+1. WHEN los HP del Núcleo de un jugador llegan a 0 o menos, OR el Mago de un jugador es destruido (HP llega a 0), THE Backend SHALL establecer `status: "finished"`, asignar `winner` al jugador contrario y dejar de aceptar acciones para esa Partida.
 2. WHEN el `turnNumber` alcanza 30 y ningún Núcleo ha sido destruido, THE Backend SHALL establecer `status: "finished"` y comparar los Cristales de ambos jugadores: si P1 tiene más, `winner: "P1"`; si P2 tiene más, `winner: "P2"`; si son iguales, `winner: "draw"`.
 3. WHEN el Backend determina el resultado final, THE Backend SHALL incluir el `winner` en el Estado devuelto por cualquier llamada posterior a `GET /api/games/:id`.
 4. IF se envía una acción a una Partida con `status: "finished"`, THEN THE Backend SHALL responder con un error indicando que la partida ha terminado y código HTTP 409, sin modificar el Estado.

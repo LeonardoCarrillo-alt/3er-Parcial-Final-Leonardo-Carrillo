@@ -465,7 +465,7 @@ interface HistoryResponse { ok: boolean; history?: HistoryEntry[]; error?: strin
 
 ### Property 10: Recolección de cristal incrementa contador y limpia casilla
 
-*Para cualquier* estado donde el Mago del jugador activo esté en una casilla que contiene un cristal, la acción `collect` SHALL incrementar `crystals` del jugador en exactamente 1 (o en 2 si `crystalDoubleActive` es `true`), eliminar el cristal de esa casilla del tablero, y mantener el maná del jugador sin cambios.
+*Para cualquier* estado donde el Mago del jugador activo esté en una casilla que contiene un cristal, la acción `collect` SHALL incrementar `crystals` del jugador en exactamente 1 (o en 2 si `crystalDoubleActive` es `true`), eliminar el cristal de esa casilla del tablero, e incrementar `mana` del jugador en exactamente 2.
 
 **Valida: Requisitos 5.1, 5.2**
 
@@ -487,9 +487,9 @@ interface HistoryResponse { ok: boolean; history?: HistoryEntry[]; error?: strin
 
 ---
 
-### Property 13: Victoria inmediata cuando el HP del Núcleo llega a 0
+### Property 13: Victoria inmediata cuando el HP del Núcleo o del Mago llega a 0
 
-*Para cualquier* acción (ataque, proyectil, minion) que reduzca los HP del Núcleo de un jugador a 0 o menos, el estado resultante SHALL tener `status: "finished"` y `winner` igual al identificador del jugador oponente, en la misma respuesta en que se aplica el daño.
+*Para cualquier* acción (ataque, proyectil, minion) que reduzca los HP del Núcleo de un jugador a 0 o menos, o que destruya al Mago de un jugador (HP a 0), el estado resultante SHALL tener `status: "finished"` y `winner` igual al identificador del jugador oponente, en la misma respuesta en que se aplica el daño. Si ambos jugadores quedan derrotados en la misma resolución, el resultado SHALL ser `"draw"`.
 
 **Valida: Requisitos 8.2, 13.1**
 

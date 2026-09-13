@@ -1,0 +1,47 @@
+name: Lint Duelo de Cristales
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js (client)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: duelo-de-cristales/client/package-lock.json
+
+      - name: Setup Node.js (server)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: duelo-de-cristales/server/package-lock.json
+
+      - name: Instalar dependencias del client
+        working-directory: duelo-de-cristales/client
+        run: npm ci
+
+      - name: Instalar dependencias del server
+        working-directory: duelo-de-cristales/server
+        run: npm ci
+
+      - name: Lint client
+        working-directory: duelo-de-cristales/client
+        run: npm run lint
+
+      - name: Lint server
+        working-directory: duelo-de-cristales/server
+        run: npm run lint

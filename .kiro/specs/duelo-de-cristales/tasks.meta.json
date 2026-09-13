@@ -103,6 +103,968 @@
         "chatSessionId": "sess_e565499a-1f88-4dee-ba54-43ba15dcf48c",
         "timestamp": 1789060049147
       }
+    ],
+    "2.1 Crear `server/src/game/types.ts` con todas las interfaces del backend": [
+      {
+        "executionId": "5e5db217-756f-43fa-b15e-14ddda113110",
+        "chatSessionId": "sess_5d96bbc8-9c3b-438c-a8d5-da8da77f486e",
+        "timestamp": 1789097598951
+      },
+      {
+        "executionId": "5e5db217-756f-43fa-b15e-14ddda113110",
+        "chatSessionId": "sess_5d96bbc8-9c3b-438c-a8d5-da8da77f486e",
+        "timestamp": 1789097664391
+      }
+    ],
+    "2.2 Crear `client/src/types/game.ts` como espejo del backend": [
+      {
+        "executionId": "5e5db217-756f-43fa-b15e-14ddda113110",
+        "chatSessionId": "sess_5d96bbc8-9c3b-438c-a8d5-da8da77f486e",
+        "timestamp": 1789097667360
+      },
+      {
+        "executionId": "5e5db217-756f-43fa-b15e-14ddda113110",
+        "chatSessionId": "sess_5d96bbc8-9c3b-438c-a8d5-da8da77f486e",
+        "timestamp": 1789097670490
+      }
+    ],
+    "2. Tipos TypeScript compartidos": [
+      {
+        "executionId": "5e5db217-756f-43fa-b15e-14ddda113110",
+        "chatSessionId": "sess_5d96bbc8-9c3b-438c-a8d5-da8da77f486e",
+        "timestamp": 1789097670529
+      }
+    ],
+    "3.1 Implementar `createInitialState(player1, player2): GameState`": [
+      {
+        "executionId": "0aefb873-f794-4ca2-831d-e2b388060d0c",
+        "chatSessionId": "sess_4fdf1cd5-5ced-48b3-86a9-c4e87c495493",
+        "timestamp": 1789098321601
+      },
+      {
+        "executionId": "0aefb873-f794-4ca2-831d-e2b388060d0c",
+        "chatSessionId": "sess_4fdf1cd5-5ced-48b3-86a9-c4e87c495493",
+        "timestamp": 1789098392149
+      }
+    ],
+    "3.7 Escribir tests unitarios para `generator.ts`": [
+      {
+        "executionId": "d28f3e1e-cf73-45f9-807c-15ab3bcb7bca",
+        "chatSessionId": "sess_2c189365-0e7d-4c0d-90a9-b449653bff57",
+        "timestamp": 1789098910845
+      },
+      {
+        "executionId": "d28f3e1e-cf73-45f9-807c-15ab3bcb7bca",
+        "chatSessionId": "sess_2c189365-0e7d-4c0d-90a9-b449653bff57",
+        "timestamp": 1789099046097
+      }
+    ],
+    "4. Checkpoint — Verificar generación del estado inicial": [
+      {
+        "executionId": "383c6091-b287-4aa1-939a-f27c97c8359d",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789140243363
+      }
+    ],
+    "5.1 Implementar `validateAction(state, req): ValidationResult`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141176734
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141184117
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141269266
+      }
+    ],
+    "5.2 Validar que la partida no ha terminado (`status !== \"finished\"`)": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141176772
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141275981
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141278958
+      }
+    ],
+    "5.3 Validar que la acción corresponde al jugador activo": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141176829
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141281813
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141284574
+      }
+    ],
+    "5.4 Validar maná suficiente según la acción": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141176877
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141287356
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141290457
+      }
+    ],
+    "5.5 Validar límites del tablero para `move` y `spell` (coordenadas 0–9)": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141176907
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141293291
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141296221
+      }
+    ],
+    "5.6 Validar casilla destino no bloqueada para `move`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141176935
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141299053
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141301847
+      }
+    ],
+    "5.7 Validar existencia de cristal en casilla del Mago para `collect`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141176962
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141304775
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141307863
+      }
+    ],
+    "5.8 Validar casilla adyacente libre para `summon` (prioridad N > E > S > O)": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141176993
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141310681
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141313658
+      }
+    ],
+    "5.9 Validar dirección válida para `move` y `spell`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177024
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141316847
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141622175
+      }
+    ],
+    "6.1 Implementar `applyAction(state, req): GameState` — función principal": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177053
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141636934
+      }
+    ],
+    "6.2 Paso 1: Expirar obstáculos temporales (`Bloqueo`)": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177084
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143472205
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143475697
+      }
+    ],
+    "6.3 Paso 2: Evaluar evento aleatorio (10% de probabilidad, 3 tipos)": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177115
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143478842
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143482572
+      }
+    ],
+    "6.4 Paso 3: Spawn de cristal cada 4 turnos": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177181
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143479340
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143482912
+      }
+    ],
+    "6.5 Paso 5a: Acción `move` — desplazar Mago sin consumir maná": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177209
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143486210
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143490244
+      }
+    ],
+    "6.6 Paso 5b: Acción `collect` — recolectar cristal": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177241
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143486717
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143489765
+      }
+    ],
+    "6.7 Paso 5c: Acción `summon` — crear Minion adyacente": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177271
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143493357
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143496982
+      }
+    ],
+    "6.8 Paso 5d: Acción `spell` — crear Proyectil en la dirección indicada": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177298
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143493835
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143497361
+      }
+    ],
+    "6.9 Paso 5e: Acción `attack` — atacar unidad enemiga adyacente": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177326
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143500426
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143504205
+      }
+    ],
+    "6.10 Paso 5f: Acción `defend` — asignar armadura al Mago": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177358
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143500920
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143504541
+      }
+    ],
+    "6.11 Paso 6: Mover proyectiles y resolver impactos": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177411
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143507897
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143511472
+      }
+    ],
+    "6.12 Paso 7: Mover Minions hacia el Núcleo enemigo": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177449
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143508264
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143511948
+      }
+    ],
+    "6.13 Paso 8: Verificar condición de victoria o empate": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177487
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143515110
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143518135
+      }
+    ],
+    "6.14 Paso 9: Resetear armadura, registrar en history, cambiar turno, incrementar turnNumber": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177516
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143521527
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143524441
+      }
+    ],
+    "7. Checkpoint — Verificar lógica de juego completa": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177550
+      }
+    ],
+    "8.1 Implementar `POST /api/games` — crear partida": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177577
+      }
+    ],
+    "8.2 Implementar `GET /api/games/:id` — obtener estado": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177610
+      }
+    ],
+    "8.3 Implementar `POST /api/games/:id/actions` — ejecutar acción": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177644
+      }
+    ],
+    "8.4 Implementar `GET /api/games/:id/history` — obtener historial": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177675
+      }
+    ],
+    "8.5 Implementar `server/src/index.ts` — entrada del servidor": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177707
+      }
+    ],
+    "9. Checkpoint — Verificar backend completo": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177742
+      }
+    ],
+    "10.1 Implementar `client/src/hooks/useGame.ts` — estado y operaciones": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177782
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141187051
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141272401
+      }
+    ],
+    "10.2 Implementar `createGame(player1, player2)` con `fetch` nativo": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177825
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141635946
+      },
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141640339
+      }
+    ],
+    "10.3 Implementar `fetchState()` con `fetch` nativo": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177876
+      }
+    ],
+    "10.4 Implementar `sendAction(req)` con `fetch` nativo": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177908
+      }
+    ],
+    "10.5 Manejo de errores: preservar estado válido ante 4xx/5xx": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177938
+      }
+    ],
+    "11.1 Crear `StartScreen.tsx` — pantalla de inicio con validación": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141177967
+      }
+    ],
+    "11.2 Crear `Board.tsx` — cuadrícula 10×10 CSS Grid": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178000
+      }
+    ],
+    "11.3 Crear `Cell.tsx` — renderizado de casillas con iconos y colores": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178031
+      }
+    ],
+    "11.4 Crear `Hud.tsx` — HUD permanente con estadísticas": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178065
+      }
+    ],
+    "11.5 Crear `ActionPanel.tsx` — panel de 6 botones con control de turno": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178099
+      }
+    ],
+    "11.6 Crear `ResultScreen.tsx` — pantalla de resultado final": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178132
+      }
+    ],
+    "11.7 Actualizar `App.tsx` — orquestar la navegación entre pantallas": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178170
+      }
+    ],
+    "11.8 Crear `styles.css` — estilos globales con animaciones CSS": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178202
+      }
+    ],
+    "12.1 Conectar `fetch` al backend real via proxy de Vite": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178233
+      }
+    ],
+    "12.2 Probar flujo completo de juego manualmente desde el navegador": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178264
+      }
+    ],
+    "12.3 Verificar animaciones CSS de proyectiles y Minions": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178301
+      }
+    ],
+    "12.4 Verificar mensajes de error del backend en el frontend": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178333
+      }
+    ],
+    "13.1 Instalar Playwright y configurar `playwright.config.ts`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178368
+      }
+    ],
+    "13.2 Escribir `tests/e2e/game.spec.ts` con los 12 casos de prueba": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178410
+      }
+    ],
+    "13.3 Ejecutar E2E en modo headless y verificar que pasan": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178447
+      }
+    ],
+    "14. Checkpoint — Verificar E2E completo": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178481
+      }
+    ],
+    "15.1 Crear `.github/workflows/lint.yml`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178521
+      }
+    ],
+    "15.2 Crear `.github/workflows/e2e.yml`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178559
+      }
+    ],
+    "15.3 Crear `.github/workflows/deploy.yml`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178599
+      }
+    ],
+    "15.4 Verificar que los 3 workflows pasan en GitHub Actions": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178633
+      }
+    ],
+    "16.1 Configurar Express para servir `client/dist` en producción": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178670
+      }
+    ],
+    "16.2 Crear `render.yaml` o configurar servicio manualmente en Render": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178707
+      }
+    ],
+    "16.3 Publicar y obtener URL pública de Render": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178774
+      }
+    ],
+    "16.4 Probar partida completa contra la URL pública": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178807
+      }
+    ],
+    "17.1 Completar `docs/introduction.md`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178838
+      }
+    ],
+    "17.2 Completar `docs/reglas.md`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178872
+      }
+    ],
+    "17.3 Completar `docs/api.md`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178908
+      }
+    ],
+    "17.4 Completar `docs/decisiones.md`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178943
+      }
+    ],
+    "17.5 Completar `docs/investigacion.md`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141178978
+      }
+    ],
+    "17.6 Completar `docs/ia.md`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141179012
+      }
+    ],
+    "17.7 Completar `README.md` raíz": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141179045
+      }
+    ],
+    "18. Checkpoint — Verificar repositorio antes del deadline": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141179078
+      }
+    ],
+    "19.1 Grabar video de demostración (3–5 minutos)": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141179110
+      }
+    ],
+    "19.2 Simular cambio de defensa en `engine.ts`": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141179143
+      }
+    ],
+    "19.3 Restaurar o mantener el cambio del daño según decisión final": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141179181
+      }
+    ],
+    "19.4 Ejecutar E2E visual en Chrome contra la URL pública": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141179216
+      }
+    ],
+    "19.5 Verificar commit final antes del deadline (15/09/2026 a las 16:00)": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141179254
+      }
+    ],
+    "5. Validador de acciones (`validator.ts`)": [
+      {
+        "executionId": "b2cdaaef-db81-448d-8e41-71cda6d195ca",
+        "chatSessionId": "sess_721cd84c-5b9f-4a64-b661-c7b0d4ab6195",
+        "timestamp": 1789141622209
+      }
+    ],
+    "5.10 Escribir tests unitarios para `validator.ts`": [
+      {
+        "executionId": "1dbea1eb-1b87-4c93-97f9-dc0e7305d0e0",
+        "chatSessionId": "sess_18eaa4ef-0b0d-4c66-bbb6-0297255f6442",
+        "timestamp": 1789142559940
+      },
+      {
+        "executionId": "1dbea1eb-1b87-4c93-97f9-dc0e7305d0e0",
+        "chatSessionId": "sess_18eaa4ef-0b0d-4c66-bbb6-0297255f6442",
+        "timestamp": 1789142642614
+      }
+    ],
+    "5.11 Escribir property test — Acción de jugador inactivo siempre rechazada (Propiedad 5)": [
+      {
+        "executionId": "0c023cfb-b735-43db-b07a-e0e4f3a61657",
+        "chatSessionId": "sess_cabc6fb4-7ab5-4332-bc2c-3d35c8339e35",
+        "timestamp": 1789142734982
+      },
+      {
+        "executionId": "0c023cfb-b735-43db-b07a-e0e4f3a61657",
+        "chatSessionId": "sess_cabc6fb4-7ab5-4332-bc2c-3d35c8339e35",
+        "timestamp": 1789142809230
+      }
+    ],
+    "5.12 Escribir property test — Maná insuficiente rechaza la acción (Propiedad 6)": [
+      {
+        "executionId": "fffdcf18-4304-4019-9918-280e5142b676",
+        "chatSessionId": "sess_229a2334-f606-4f23-a621-979a4b80f4db",
+        "timestamp": 1789142931453
+      },
+      {
+        "executionId": "fffdcf18-4304-4019-9918-280e5142b676",
+        "chatSessionId": "sess_229a2334-f606-4f23-a621-979a4b80f4db",
+        "timestamp": 1789142988318
+      }
+    ],
+    "6.15 Escribir tests unitarios para `engine.ts`": [
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143535783
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143985333
+      }
+    ],
+    "6.16 Escribir property test — Alternancia de turno e incremento de turnNumber (Propiedad 4)": [
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143989214
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143992484
+      }
+    ],
+    "6.17 Escribir property test — Movimiento del Mago sin consumir maná (Propiedad 8)": [
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143995714
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789143998770
+      }
+    ],
+    "6.18 Escribir property test — Recolección de cristal (Propiedad 10)": [
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789144002282
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789144006839
+      }
+    ],
+    "6.19 Escribir property test — Invocación de Minion (Propiedad 11)": [
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789144002877
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789144006347
+      }
+    ],
+    "6.21 Escribir property test — Victoria al destruir Núcleo (Propiedad 13)": [
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789144010227
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789144014712
+      }
+    ],
+    "6.20 Escribir property test — Daño de ataque con armadura (Propiedad 12)": [
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789144011150
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789144015101
+      }
+    ],
+    "6.23 Escribir property test — Minion reduce distancia Manhattan (Propiedad 15)": [
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789144018492
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789144325607
+      }
+    ],
+    "6.22 Escribir property test — Victoria/empate al turno 30 (Propiedad 14)": [
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789144019351
+      },
+      {
+        "executionId": "6d31378a-b57d-4a61-a0dd-cc769423e4bb",
+        "chatSessionId": "sess_c9ee4031-2792-413f-b8bb-2e907db364ff",
+        "timestamp": 1789144325001
+      }
     ]
   }
 }

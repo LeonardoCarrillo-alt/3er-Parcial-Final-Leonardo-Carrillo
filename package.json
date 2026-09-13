@@ -8,5 +8,9 @@
     "build": "npm run build --prefix duelo-de-cristales/client && npx tsc -p duelo-de-cristales/server/tsconfig.json",
     "lint": "npm run lint --prefix duelo-de-cristales/client && npx eslint duelo-de-cristales/server/src --ext .ts",
     "test:e2e": "npx playwright test --config=playwright.config.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "wait-on": "^8.0.0"
   }
 }
