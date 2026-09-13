@@ -474,26 +474,26 @@ Plan de implementación para un juego web por turnos de 2 jugadores construido c
 
   - [x] 15.4 Verificar que los 3 workflows pasan en GitHub Actions
     - Hacer un push de prueba a `main`. Confirmar en la pestaña Actions que los 3 workflows se ejecutan y terminan en verde. Corregir errores de configuración YAML si los hay.
-    - _State: lint.yml ✓ y e2e.yml ✓ en verde (15/15). deploy.yml: jobs lint ✓ y e2e ✓; el job `deploy` pasa el build y llega a `curl`, que falla con `(3) Malformed URL` hasta crear el secret `RENDER_DEPLOY_HOOK_URL` (depende del servicio de Render, task 16). Se corrigió además el build raíz para que `tsc`/`eslint` resuelvan en runners limpios._
+    - _State: 3 workflows en verde en GitHub Actions (lint ✓, e2e ✓ 15/15, deploy ✓ con `RENDER_DEPLOY_HOOK_URL`). App publicada en https://threeer-parcial-final-leonardo-carrillo.onrender.com (`/api/health` → 200)._
     - _Requisitos: 20.1_
 
 - [ ] 16. Despliegue en Render
   - Publicar la aplicación con frontend y backend en el mismo dominio bajo un único servicio.
   - _Requisitos: 19.1, 19.2, 19.3_
 
-  - [~] 16.1 Configurar Express para servir `client/dist` en producción
+  - [x] 16.1 Configurar Express para servir `client/dist` en producción
     - Verificar que `server/src/index.ts` tiene `express.static(path.join(__dirname, "../../client/dist"))` y el fallback `res.sendFile("index.html")` para rutas no-API cuando `NODE_ENV === "production"`.
     - _Requisitos: 19.1_
 
-  - [~] 16.2 Crear `render.yaml` o configurar servicio manualmente en Render
+  - [x] 16.2 Crear `render.yaml` o configurar servicio manualmente en Render
     - Tipo: Web Service. Build command: `npm ci && npm run build`. Start command: `node server/dist/index.js`. Variable de entorno: `NODE_ENV=production`, `PORT` gestionado por Render. Añadir `RENDER_DEPLOY_HOOK_URL` como secreto en GitHub.
     - _Requisitos: 19.2_
 
-  - [~] 16.3 Publicar y obtener URL pública de Render
+  - [x] 16.3 Publicar y obtener URL pública de Render
     - Hacer el primer deploy manual desde el dashboard de Render. Verificar que el build y el start completan sin errores. Copiar la URL pública (ej. `https://duelo-de-cristales.onrender.com`).
     - _Requisitos: 19.2_
 
-  - [~] 16.4 Probar partida completa contra la URL pública
+  - [x] 16.4 Probar partida completa contra la URL pública
     - Abrir la URL en el navegador. Jugar una partida completa (inicio → acciones → victoria) para confirmar que el frontend sirve desde Express y las rutas `/api/*` responden correctamente en producción.
     - _Requisitos: 19.1, 19.2, 19.3_
 

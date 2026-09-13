@@ -12,6 +12,7 @@ import spellFx from "../assets/image_7290478.png";
 import coreP1 from "../assets/image_7290380.png";
 import coreP2 from "../assets/image_7290403.png";
 import crystalSprite from "../assets/image_7290421.png";
+import minionSprite from "../assets/image_7290444.png";
 
 interface CellProps {
   cell: CellType;
@@ -68,22 +69,30 @@ export function Cell({ cell, units, projectiles, x, y, effect }: CellProps) {
       if (unit.owner === "P1") {
         className += " cell-unit cell-minion-p1";
         testId = "cell-minion-p1";
-        content = "👾";
+        content = (
+          <img className="minion-sprite" src={minionSprite} alt="Súbdito P1" />
+        );
       } else {
         className += " cell-unit cell-minion-p2";
         testId = "cell-minion-p2";
-        content = "👾";
+        content = (
+          <img className="minion-sprite" src={minionSprite} alt="Súbdito P2" />
+        );
       }
     }
   } else if (projectile) {
     if (projectile.owner === "P1") {
       className += " cell-projectile cell-proj-p1";
       testId = "cell-projectile-p1";
-      content = "✨";
+      content = (
+        <img className="projectile-sprite" src={spellFx} alt="Proyectil P1" />
+      );
     } else {
       className += " cell-projectile cell-proj-p2";
       testId = "cell-projectile-p2";
-      content = "✨";
+      content = (
+        <img className="projectile-sprite" src={spellFx} alt="Proyectil P2" />
+      );
     }
   } else {
     switch (cell.type) {

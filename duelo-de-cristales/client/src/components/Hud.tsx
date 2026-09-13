@@ -40,8 +40,13 @@ export function Hud({ state }: HudProps) {
       </div>
 
       <div className="hud-stat">
-        <span className="hud-hidden" data-testid="hud-turn">{turnNumber}</span>
-        <span className="hud-hidden" data-testid="hud-active-player">{turn}</span>
+        <span className="hud-label">Turno</span>
+        <span className="hud-value" data-testid="hud-turn">{turnNumber}</span>
+      </div>
+
+      <div className="hud-stat">
+        <span className="hud-label">Activo</span>
+        <span className="hud-value" data-testid="hud-active-player">{turn}</span>
       </div>
 
       <div className="hud-stat hud-p2">
