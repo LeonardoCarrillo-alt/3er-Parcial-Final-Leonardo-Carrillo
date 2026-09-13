@@ -529,7 +529,7 @@ Plan de implementación para un juego web por turnos de 2 jugadores construido c
     - Secciones: descripción breve, requisitos previos (Node.js, npm), comandos de instalación y ejecución local, arquitectura (diagrama Mermaid), referencia de endpoints JSON, variables de entorno, enlace al deploy en Render, enlace al video de demostración.
     - _Requisitos: 21.1, 21.2_
 
-- [~] 18. Checkpoint — Verificar repositorio antes del deadline
+- [x] 18. Checkpoint — Verificar repositorio antes del deadline
   - Ejecutar `git status` para confirmar que no hay cambios sin confirmar. Revisar que `npm run lint`, `npm run build` y `npx playwright test` pasan. Verificar el deploy en Render está actualizado.
 
 - [ ] 19. Ensayo de defensa y cierre
