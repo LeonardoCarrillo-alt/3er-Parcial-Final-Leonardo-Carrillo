@@ -472,8 +472,9 @@ Plan de implementación para un juego web por turnos de 2 jugadores construido c
     - Trigger: solo `push` a `main`. Pasos: ejecutar `lint.yml` → `e2e.yml` y, si ambos pasan con código 0, invocar el webhook de despliegue de Render via `curl` con el token almacenado en GitHub Secrets (`RENDER_DEPLOY_HOOK_URL`).
     - _Requisitos: 20.1, 20.4_
 
-  - [~] 15.4 Verificar que los 3 workflows pasan en GitHub Actions
+  - [x] 15.4 Verificar que los 3 workflows pasan en GitHub Actions
     - Hacer un push de prueba a `main`. Confirmar en la pestaña Actions que los 3 workflows se ejecutan y terminan en verde. Corregir errores de configuración YAML si los hay.
+    - _State: lint.yml ✓ y e2e.yml ✓ en verde (15/15). deploy.yml: jobs lint ✓ y e2e ✓; el job `deploy` pasa el build y llega a `curl`, que falla con `(3) Malformed URL` hasta crear el secret `RENDER_DEPLOY_HOOK_URL` (depende del servicio de Render, task 16). Se corrigió además el build raíz para que `tsc`/`eslint` resuelvan en runners limpios._
     - _Requisitos: 20.1_
 
 - [ ] 16. Despliegue en Render
