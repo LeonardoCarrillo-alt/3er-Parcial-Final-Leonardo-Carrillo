@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 
-// CORS 
+// CORS a usar solo en entorno de desarrollo
 if (process.env.NODE_ENV !== "production") {
   app.use((_req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
