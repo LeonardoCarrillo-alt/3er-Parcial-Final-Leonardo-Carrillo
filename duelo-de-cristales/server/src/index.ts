@@ -6,14 +6,9 @@ import gamesRouter from "./routes/games";
 
 const app = express();
 
-// ---------------------------------------------------------------------------
-// Body parsing
-// ---------------------------------------------------------------------------
 app.use(express.json());
 
-// ---------------------------------------------------------------------------
-// CORS — only in non-production environments
-// ---------------------------------------------------------------------------
+// CORS 
 if (process.env.NODE_ENV !== "production") {
   app.use((_req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
@@ -23,27 +18,19 @@ if (process.env.NODE_ENV !== "production") {
   });
 }
 
-// ---------------------------------------------------------------------------
-// API routes
-// ---------------------------------------------------------------------------
+
 app.use("/api", gamesRouter);
 
-// ---------------------------------------------------------------------------
-// Static files — only in production
-// ---------------------------------------------------------------------------
+
 if (process.env.NODE_ENV === "production") {
   const clientDist = path.join(__dirname, "../../client/dist");
   app.use(express.static(clientDist));
 
-  // Fallback: serve index.html for non-API routes (SPA client-side routing)
   app.get(/^(?!\/api).*$/, (_req, res) => {
     res.sendFile(path.join(clientDist, "index.html"));
   });
 }
 
-// ---------------------------------------------------------------------------
-// Start server (skip binding in test environment)
-// ---------------------------------------------------------------------------
 const PORT = process.env.PORT || 3001;
 export const server =
   process.env.NODE_ENV === "test"
@@ -52,9 +39,6 @@ export const server =
         console.log(`Server listening on port ${PORT}`);
       });
 
-// ---------------------------------------------------------------------------
-// Graceful shutdown — Ctrl+C / SIGTERM must fully exit the process
-// ---------------------------------------------------------------------------
 function shutdown(signal: string) {
   console.log(`\n[server] ${signal} recibido, cerrando...`);
   server.close(() => process.exit(0));

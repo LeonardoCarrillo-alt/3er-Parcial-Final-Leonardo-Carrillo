@@ -12,26 +12,15 @@ import { createInitialState } from "../game/generator";
 import { validateAction } from "../game/validator";
 import { applyAction } from "../game/engine";
 
-// ---------------------------------------------------------------------------
-// In-memory game store — exported so tests can clear it between runs
-// ---------------------------------------------------------------------------
 export const gameStore = new Map<string, GameState>();
 
-// ---------------------------------------------------------------------------
-// Router
-// ---------------------------------------------------------------------------
 const router = Router();
 
-// ---------------------------------------------------------------------------
-// GET /health — Health check (usado por la configuración de Playwright)
-// ---------------------------------------------------------------------------
+
 router.get("/health", (_req: Request, res: Response): void => {
   res.status(200).json({ ok: true });
 });
 
-// ---------------------------------------------------------------------------
-// POST /games — Create a new game
-// ---------------------------------------------------------------------------
 router.post("/games", (req: Request, res: Response): void => {
   try {
     const { player1, player2 } = (req.body ?? {}) as {
@@ -61,9 +50,7 @@ router.post("/games", (req: Request, res: Response): void => {
   }
 });
 
-// ---------------------------------------------------------------------------
-// GET /games/:id — Get game state
-// ---------------------------------------------------------------------------
+
 router.get("/games/:id", (req: Request, res: Response): void => {
   try {
     const state = gameStore.get(req.params.id as string);
@@ -77,9 +64,7 @@ router.get("/games/:id", (req: Request, res: Response): void => {
   }
 });
 
-// ---------------------------------------------------------------------------
-// POST /games/:id/actions — Submit an action
-// ---------------------------------------------------------------------------
+
 router.post("/games/:id/actions", (req: Request, res: Response): void => {
   try {
     const state = gameStore.get(req.params.id as string);
@@ -125,9 +110,6 @@ router.post("/games/:id/actions", (req: Request, res: Response): void => {
   }
 });
 
-// ---------------------------------------------------------------------------
-// GET /games/:id/history — Get game history
-// ---------------------------------------------------------------------------
 router.get("/games/:id/history", (req: Request, res: Response): void => {
   try {
     const state = gameStore.get(req.params.id as string);

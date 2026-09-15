@@ -1,4 +1,4 @@
-// Duelo de Cristales — Action Validator
+// Duelo de Cristales — validacion de acciones
 
 import type {
   GameState,
@@ -8,9 +8,8 @@ import type {
   Position,
 } from "./types";
 
-// ---------------------------------------------------------------------------
-// Mana cost table (Req 3.5, 6.2, 7.5, 8.4)
-// ---------------------------------------------------------------------------
+
+// tabla de costos de Maná
 const MANA_COST: Record<string, number> = {
   move: 0,
   collect: 0,
@@ -20,9 +19,7 @@ const MANA_COST: Record<string, number> = {
   spell: 3,
 };
 
-// ---------------------------------------------------------------------------
-// Direction delta helpers
-// ---------------------------------------------------------------------------
+// direccion iniciales
 const DIRECTION_DELTA: Record<Direction, Position> = {
   north: { x: 0, y: -1 },
   south: { x: 0, y: 1 },
@@ -52,48 +49,40 @@ function isCellOccupiedByUnit(
   return state.units.some((u) => u.position.x === x && u.position.y === y);
 }
 
-// ---------------------------------------------------------------------------
-// validateAction — Task 5.1
-// Runs each check in order: status → turn → mana → bounds → cell → resource
-//                           → adjacency → direction
-// Returns { valid: true } or { valid: false, error: string }
-// ---------------------------------------------------------------------------
 export function validateAction(
   state: GameState,
   req: ActionRequest
 ): ValidationResult {
-  // 5.2 — Partida activa (Req 3.4, 13.4)
+  // Partida activa 
   if (state.status === "finished") {
     return { valid: false, error: "La partida ha terminado" };
   }
 
-  // 5.3 — Turno correcto (Req 3.3, 4.4, 5.4, 6.5)
+  // Turno correcto 
   if (req.playerId !== state.turn) {
     return { valid: false, error: "No es tu turno" };
   }
 
-  // 5.4 — Maná suficiente (Req 3.5, 6.2, 7.5, 8.4)
+  // Maná suficiente 
   const cost = MANA_COST[req.action] ?? 0;
   const currentMana = state.players[req.playerId].mana;
   if (currentMana < cost) {
     return { valid: false, error: "Maná insuficiente" };
   }
 
-  // Locate the active player's mage
+  // localizar posicion de mago
   const mage = state.units.find(
     (u) => u.type === "mage" && u.owner === req.playerId
   );
   if (!mage) {
-    // Should never happen in a valid game state, but guard anyway
     return { valid: false, error: "Mago no encontrado" };
   }
 
-  // -------------------------------------------------------------------------
-  // Action-specific validations
-  // -------------------------------------------------------------------------
-
+  
+  // validacion de acciones especificas
+  
   if (req.action === "move") {
-    // 5.9 — Dirección válida (Req 7.6)
+    // Dirección válida 
     if (!req.target || !VALID_DIRECTIONS.has(req.target)) {
       return { valid: false, error: "Dirección inválida" };
     }
@@ -101,12 +90,12 @@ export function validateAction(
     const dir = req.target;
     const dest = getNeighbour(mage.position, dir);
 
-    // 5.5 — Límites del tablero (Req 4.3)
+    // Límites del tablero
     if (!dest) {
       return { valid: false, error: "Movimiento fuera del tablero" };
     }
 
-    // 5.6 — Casilla no bloqueada (Req 4.2)
+    //Casilla no bloqueada 
     const destCell = state.board[dest.y][dest.x];
     if (
       destCell.type === "obstacle" ||
@@ -115,7 +104,7 @@ export function validateAction(
       return { valid: false, error: "Casilla bloqueada" };
     }
 
-    // Check if the opponent's mage occupies the destination
+    // verifica que un mago no este en una casilla de destino
     const opponentId = req.playerId === "P1" ? "P2" : "P1";
     const opponentMage = state.units.find(
       (u) => u.type === "mage" && u.owner === opponentId
@@ -130,7 +119,7 @@ export function validateAction(
   }
 
   if (req.action === "collect") {
-    // 5.7 — Cristal en casilla del Mago (Req 5.3)
+    // Cristal en casilla del Mago 
     const mageCell = state.board[mage.position.y][mage.position.x];
     if (mageCell.type !== "crystal") {
       return { valid: false, error: "No hay cristal en esta casilla" };
@@ -138,7 +127,7 @@ export function validateAction(
   }
 
   if (req.action === "summon") {
-    // 5.8 — Casilla adyacente libre (Req 6.3, 6.6) — priority N > E > S > O
+    // Casilla adyacente libre - prioridad N > E > S > O
     const adjDirections: Direction[] = ["north", "east", "south", "west"];
     const hasFreeCellAdj = adjDirections.some((dir) => {
       const nb = getNeighbour(mage.position, dir);
@@ -155,21 +144,12 @@ export function validateAction(
   }
 
   if (req.action === "spell") {
-    // 5.9 — Dirección válida (Req 7.6)
+    // Dirección válida 
     if (!req.target || !VALID_DIRECTIONS.has(req.target)) {
       return { valid: false, error: "Dirección inválida" };
     }
 
-    // 5.5 — The spell's direction itself doesn't strictly require the adjacent
-    // cell to be in bounds for creation; the projectile can be born on a cell
-    // outside bounds only if the mage is at the edge.  However, the design
-    // states that if the adjacent cell is out of bounds the projectile exits
-    // immediately — we do NOT block the spell in that case; the engine will
-    // handle it.  So only check that the direction is valid (already done above).
   }
-
-  // attack and defend have no further spatial constraints checked at validation time
-  // (the engine handles "no adjacent enemy" for attack)
 
   return { valid: true };
 }

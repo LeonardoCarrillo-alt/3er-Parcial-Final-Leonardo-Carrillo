@@ -58,10 +58,8 @@ export function useGame(): UseGameReturn {
       if (res.ok && data.ok) {
         setState(data.state as GameState);
       }
-      // On error: preserve last valid state, don't update it
     } catch (err) {
       setError(err instanceof Error ? err.message : "Error de red");
-      // state is intentionally left unchanged
     } finally {
       setLoading(false);
     }
@@ -81,7 +79,6 @@ export function useGame(): UseGameReturn {
       const data: ActionResponse = await res.json();
 
       if (!res.ok || !data.ok) {
-        // Preserve last valid state — only update error
         setError(data.error ?? `Error ${res.status}`);
         return;
       }
@@ -89,7 +86,6 @@ export function useGame(): UseGameReturn {
       setState(data.state ?? null);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Error de red");
-      // state is intentionally left unchanged
     } finally {
       setLoading(false);
     }

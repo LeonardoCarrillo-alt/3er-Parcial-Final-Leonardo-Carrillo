@@ -17,14 +17,13 @@ export function ActionPanel({
   const [visibleError, setVisibleError] = useState<string | null>(null);
   const [prevError, setPrevError] = useState<string | null>(null);
 
-  // Sync the visible error when the prop changes (render-phase update,
-  // keeps the error shown for at least 3 seconds).
+  
   if (error !== prevError) {
     setPrevError(error);
     setVisibleError(error);
   }
 
-  // Clear the visible error after 3 seconds.
+  // limpia el error despues de 3 segundos
   useEffect(() => {
     if (!visibleError) return;
     const timer = setTimeout(() => {

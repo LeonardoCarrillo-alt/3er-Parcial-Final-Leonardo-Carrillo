@@ -1,6 +1,5 @@
 // Duelo de Cristales —  Game Types compartidos (Backend source of truth)
 
-// Primitive unions 
 
 export type PlayerId = "P1" | "P2";
 
@@ -58,7 +57,7 @@ export interface GameEvent {
   affectedEntities: string[];
 }
 
-/** Req 3.6, 14.2 — turnNumber in range 1–30, timestamp ISO 8601 */
+/** turnos en rango de 1 - 30 */
 export interface HistoryEntry {
   player: PlayerId;
   action: ActionType;
@@ -66,7 +65,7 @@ export interface HistoryEntry {
   timestamp: string;
 }
 
-/** Req 1.6, 2.3 — complete authoritative game state */
+/**estado de juego completo */
 export interface GameState {
   id: string;
   status: GameStatus;
@@ -81,20 +80,16 @@ export interface GameState {
   winner: PlayerId | "draw" | null;
   crystalDoubleActive: boolean;
 }
-
-// Validation 
+ 
 
 export type ValidationResult = { valid: true } | { valid: false; error: string };
 
-//  API request / response shapes 
 
-/** Req 1.7 */
 export interface CreateGameRequest {
   player1: string;
   player2: string;
 }
 
-/** Req 1.6 */
 export interface CreateGameResponse {
   ok: boolean;
   gameId?: string;
@@ -102,21 +97,18 @@ export interface CreateGameResponse {
   error?: string;
 }
 
-/** Req 3.7 */
 export interface ActionRequest {
   playerId: PlayerId;
   action: ActionType;
   target?: Direction;
 }
 
-/** Req 3.2 */
 export interface ActionResponse {
   ok: boolean;
   state?: GameState;
   error?: string;
 }
 
-/** Req 14.1 */
 export interface HistoryResponse {
   ok: boolean;
   history?: HistoryEntry[];
