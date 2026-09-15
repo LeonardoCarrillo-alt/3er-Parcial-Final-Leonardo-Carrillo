@@ -114,7 +114,7 @@ Documentación completa de la API (cuerpos de error, códigos HTTP y ejemplos): 
 
 ## Video de demostración
 
-**Enlace:** *(pendiente de grabar)* — partida completa en navegador, requests JSON en DevTools, E2E en Chromium, 3 workflows verdes de GitHub Actions y URL pública de Render.
+**Enlace:** [`duelo-de-cristales/docs/demo.mp4`](duelo-de-cristales/docs/demo.mp4) — partida completa en navegador, requests JSON en DevTools, E2E en Chromium, 3 workflows verdes de GitHub Actions y URL pública de Render.
 
 ## Documentación
 
