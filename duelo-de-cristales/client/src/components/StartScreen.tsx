@@ -98,7 +98,7 @@ export function StartScreen({ onGameCreated }: StartScreenProps) {
           onClick={handleStart}
           disabled={loading}
         >
-          {loading ? "Iniciando…" : "Iniciar Partida"}
+          {loading ? "Iniciando…" : "Inicio"}
         </button>
       </div>
     </div>
